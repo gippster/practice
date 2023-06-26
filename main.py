@@ -1,3 +1,2 @@
 import pandas as pd
-
-print("ghjg")
+print("tomag")
