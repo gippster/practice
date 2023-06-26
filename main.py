@@ -1,3 +1,3 @@
-print("ausare31 loxxxxxxx")
-print("yuyuuyuyuyuu")
-a = 10
+import pandas as pd
+
+df = pd.read_csv('dataset.csv')
