@@ -1,3 +1,3 @@
-print("ausare31 loxxxxxxx")
+print("ausare31")
 print("yuyuuyuyuyuu")
 a = 10
