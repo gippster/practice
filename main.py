@@ -1,2 +1,3 @@
-print("ausare31 loxxxxxxx")
-print("ещьфещьф")
+import pandas as pd
+
+print("ghjg")
