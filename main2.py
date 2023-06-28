@@ -5,21 +5,21 @@ data = pd.read_csv('dataset.csv')
 print(data.head())
 data.info()
 data['datetime'] = pd.to_datetime(data['datetime'])
-#график изменения электрического потребления со временем
+# график изменения электрического потребления со временем
 plt.figure(figsize=(12, 6))
 plt.plot(data['datetime'], data['electricity_consumption'])
 plt.title('Electrical Consumption over Time')
 plt.xlabel('Datetime')
 plt.ylabel('Electricity Consumption (MWh)')
 plt.show()
-#распределение температуры
+# распределение температуры
 plt.figure(figsize=(8, 6))
 sns.histplot(data['temperature'], bins=20, kde=True)
 plt.title('Temperature Distribution')
 plt.xlabel('Temperature')
 plt.ylabel('Count')
 plt.show()
-#распределение значений для "var1"
+# распределение значений для "var1"
 plt.figure(figsize=(8, 6))
 sns.histplot(data['var1'], bins=20, kde=True)
 plt.title('Var1 Distribution')
@@ -65,8 +65,8 @@ plt.title('Correlation Matrix')
 plt.show()
 
 plt.figure(figsize=(8, 6))
-plt.scatter(data['windspeed'], data['electricity_consumption'])
-plt.title('windspeed vs Electricity Consumption')
-plt.xlabel('windspeed')
-plt.ylabel('Electricity Consumption (MWh)')
+plt.scatter(data['temperature'], data['var1'])
+plt.title('Temperature vs var1')
+plt.xlabel('Temperature')
+plt.ylabel('var1')
 plt.show()
