@@ -5,7 +5,7 @@ import seaborn as sns
 data = pd.read_csv('dataset.csv')
 print(data.head())
 data.info()
-data['datetime'] = pd.to_datetime(data['datetime'])
+data['Datetime'] = pd.to_datetime(data['Datetime'])
 
 #график изменения электрического потребления со временем
 
