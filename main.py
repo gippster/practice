@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from pandas_profiling import ProfileReport
 import plotly_express as px
 import datetime as dt
 import numpy as np
