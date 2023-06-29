@@ -5,7 +5,7 @@ import seaborn as sns
 data = pd.read_csv('powerconsumption.csv')
 print(data.head())
 data.info()
-data['Datetime'] = pd.to_datetime(data['Datetime'])
+data['datetime'] = pd.to_datetime(data['datetime'])
 #график изменения электрического потребления со временем
 plt.figure(figsize=(12, 6))
 plt.plot(data['Datetime'], data['PowerConsumption'])
