@@ -245,7 +245,7 @@ mae = mean_absolute_error(test_df[target], xgb_preds)
 mse = mean_squared_error(test_df[target], xgb_preds)
 rmse = np.sqrt(mse)
 r2 = r2_score(test_df[target], xgb_preds)
-
+# Вывод XGBoost
 print("Метрики работы модели XGBoost:")
 print("__________________________________________________________________")
 print("Model Percentage Mean Absolute Error: ", mape)
@@ -256,13 +256,14 @@ print("R^2: ", r2)
 print("Percentage Mean Absolute Error: ", mapedf)
 print("__________________________________________________________________")
 
+
 mapedf = np.mean(np.abs((data["PowerConsumption"] - datapredict["PowerConsumptionCat"]) / data["PowerConsumption"])) * 100
 mape = np.mean(np.abs((test_df[target] - cat_preds) / test_df[target])) * 100
 mae = mean_absolute_error(test_df[target], cat_preds)
 mse = mean_squared_error(test_df[target], cat_preds)
 rmse = np.sqrt(mse)
 r2 = r2_score(test_df[target], cat_preds)
-
+# Вывод CatBoost
 print("Метрики работы модели Catboost:")
 print("__________________________________________________________________")
 print("Model Percentage Mean Absolute Error: ", mape)
