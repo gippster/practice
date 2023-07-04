@@ -90,8 +90,8 @@ fig = px.box(data,
 fig.show()
 
 fig = px.box(data,
-             y="WindSpeed",
-             title="Общая статистика скорости ветра")
+             y="Temperature",
+             title="Общая статистика температуры")
 
 fig.show()
 
@@ -101,7 +101,7 @@ plt.figure(figsize=(12, 6))
 plt.plot(data['Datetime'], data['PowerConsumption'])
 plt.title('Electrical Consumption over Time')
 plt.xlabel('Datetime')
-plt.ylabel('Electricity Consumption (MWh)')
+plt.ylabel('Electricity Consumption (KWh)')
 plt.show()
 
 # распределение температуры
@@ -140,7 +140,7 @@ plt.show()
 plt.figure(figsize=(8, 6))
 sns.histplot(data['PowerConsumption'], bins=20, kde=True)
 plt.title('Power Consumption Distribution')
-plt.xlabel('Power Consumption (MWh)')
+plt.xlabel('Power Consumption (KWh)')
 plt.ylabel('Count')
 plt.show()
 
@@ -157,7 +157,7 @@ plt.figure(figsize=(8, 6))
 plt.scatter(data['Temperature'], data['PowerConsumption'])
 plt.title('Temperature vs Power Consumption')
 plt.xlabel('Temperature')
-plt.ylabel('Power Consumption (MWh)')
+plt.ylabel('Power Consumption (KWh)')
 plt.show()
 
 fig = px.scatter(data,
@@ -179,9 +179,6 @@ print(data_12.head())
 
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
-from keras.models import Sequential
-from keras.layers import LSTM, Dense
-import tensorflow as tf
 import xgboost as xgb
 from catboost import CatBoostRegressor 
 
